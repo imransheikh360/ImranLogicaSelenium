@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -51,6 +52,9 @@ public abstract class DriverTestCase {
 			driver = new InternetExplorerDriver();
 			
 		} else if (DriverType.Chrome.toString().equals(driverType)) {
+			
+			ChromeOptions chromeOptions= new ChromeOptions();
+			chromeOptions.setBinary("C:\\Users\\imrans\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe");
 			String chromeDriverPath = "F:\\AutomationWorkspace\\SeleniumSession\\Drivers\\chromedriver.exe";
 			System.setProperty("webdriver.chrome.driver", chromeDriverPath);
 		    driver = new ChromeDriver();
