@@ -57,7 +57,7 @@ public abstract class DriverTestCase {
 			chromeOptions.setBinary("C:\\Users\\imrans\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe");
 			String chromeDriverPath = "F:\\AutomationWorkspace\\SeleniumSession\\Drivers\\chromedriver.exe";
 			System.setProperty("webdriver.chrome.driver", chromeDriverPath);
-		    driver = new ChromeDriver();
+		    driver = new ChromeDriver(chromeOptions);
 			
 		} else {
 			driver = new FirefoxDriver();			
